@@ -1,0 +1,18 @@
+.Create{
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.Clear{
+     width: 200px;
+     height: 100px;
+     background-color: bisque;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

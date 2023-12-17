@@ -1,19 +1,17 @@
-const button = document.getElementById('getInfo');
-button.addEventListener('click', function() {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(data => {
-      const list = document.createElement('ul');
-      data.forEach(item => {
-        const listItem = document.createElement('li');
-        const title = document.createElement('h2');
-        const text = document.createElement('p');
-        title.textContent = item.title;
-        text.textContent = item.body;
-        listItem.appendChild(title);
-        listItem.appendChild(text);
-        list.appendChild(listItem);
-      });
-      document.body.appendChild(list);
+const Create = document.getElementById('Create1');
+const Clear = document.getElementById('Clear1');
+const wrapper = document.getElementById('wrapper1');
+
+Create.addEventListener('click', function(){
+    const newBut = document.createElement('button');
+    newBut.addEventListener('click', function(){
+        wrapper.innerHTML = '';
     });
+    newBut.style.width = '200px';
+    newBut.style.height = '100px';
+    wrapper.insertAdjacentElement('afterbegin',newBut);
+ });
+
+ Clear.addEventListener('click', function(){
+    wrapper.innerHTML = '';
 });
